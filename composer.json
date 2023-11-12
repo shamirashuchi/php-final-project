@@ -1,0 +1,14 @@
+{
+  "name" : "php-batch-10/php-batch-10",
+  "type" : "project",
+  "description" : "A simple php project",
+  "keywords" : [],
+  "License" :  "",
+  "require" : {},
+  "require-dev" : {},
+  "autoload" : {
+    "psr-4" : {
+      "App\\" : "app//"
+    }
+  }
+}
