@@ -2,6 +2,7 @@
 
 
 namespace App\classes;
+use App\classes\students;
 //composer resource khujbe namespace diye
 //namespace is a syntax of oop  which is used for directory
 // variable is memory location address
@@ -15,7 +16,7 @@ namespace App\classes;
 //readable
 class Welcome
 {
-    public $message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
+    public $student, $students,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
     //nijossho method
     public function  __construct()
     {
@@ -25,6 +26,11 @@ class Welcome
     //created method of our own
     public function index()
     {
+        //composer update after writting somthing in composer
+        $this->student = new student();
+        $this->students = $this->student->getAllStuddent();
+        return view('home', ['students' => $this->students]);
+//        include "views/home.php";
 
 
         //Conditional statement
@@ -126,7 +132,7 @@ class Welcome
         echo '<pre>';
 //        print_r($this->data);
 
-        var_dump($this->data);
+        //var_dump($this->data);//full information of array with datatype
 
 
 //        echo $this->data[2]['email'];
