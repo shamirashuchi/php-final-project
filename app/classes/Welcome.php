@@ -403,6 +403,14 @@ class Welcome
 //        echo '<br/>';
 //        echo --$this->firstNumber;//18
     }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
 
 
 }
