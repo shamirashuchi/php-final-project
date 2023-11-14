@@ -1,18 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<ul>
-    <li><a href="web.php?page=home">Home</a></li>
-    <li><a href="web.php?page=about">About</a></li>
-    <li><a href="web.php?page=contact">Contact</a></li>
-</ul>
+<?php include "header.php"; ?>
 <h1>This is about page</h1>
-</body>
-</html>
+<img src="assets/img/1.jpeg" alt="" height="300" width="400"/>
+<?php include "footer.php"; ?>
