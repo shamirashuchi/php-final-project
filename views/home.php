@@ -2,39 +2,76 @@
 
 
 
-<div class="div-one">
-        Hello world
+<!--<div class="div-one">-->
+<!--        Hello world-->
+<!--</div>-->
+<!---->
+<!--<div class="div-two">-->
+<!---->
+<!--</div>-->
+<!---->
+<!--<div class="div-three">-->
+<!---->
+<!--</div>-->
+<!---->
+<!--<div class="div-four">-->
+<!---->
+<!--</div>-->
+<!---->
+<!--<div class="div-five">-->
+<!---->
+<!--</div>-->
+<!---->
+<!--<div class="div-six">-->
+<!---->
+<!--</div>-->
+
+
+
+
+<!--Grid-webpage layout tecknique-->
+<header>
+<div class="container">
+    <div class="row">
+        <div class="col-3 h-200 demo">LOGO</div>
+        <div class="col-9 h-200">BANNER</div>
+    </div>
+</div>
+</header>
+
+<nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12 h-50">MENU</div>
+    </div>
+</div>
+    </nav>
+
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-3 h-600">SIDEBAR</div>
+        <div class="col-9 h-600">MAIN CONTENT</div>
+    </div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-3 h-250">ONE</div>
+        <div class="col-3 h-250">TWO</div>
+        <div class="col-3 h-250">THREE</div>
+        <div class="col-3 h-250">FOUR</div>
+    </div>
 </div>
 
-<div class="div-two">
-
+<div class="container">
+    <div class="row">
+        <div class="col-12 h-40">FOOTER</div>
+    </div>
 </div>
-
-<div class="div-three">
-
-</div>
-
-<div class="div-four">
-
-</div>
-
-<div class="div-five">
-
-</div>
-
-<div class="div-six">
-
-</div>
-
-
-
-
-
-
-
-
-
-
+</footer>
 
 
 <?php include "footer.php"; ?>

@@ -1,72 +1,129 @@
-.test
+/*.test*/
+/*{*/
+/*    background-color:green;*/
+/*    color: white;*/
+/*}*/
+/*.menu*/
+/*{*/
+/*    list-style-type: none;*/
+/*}*/
+/*.menu li{*/
+/*    float:left;*/
+/*    width: 120px;*/
+/*    border:1px solid gray;*/
+/*}*/
+/*.menu li a{*/
+/*    display:block;*/
+/*    text-decoration : none;*/
+/*    text-align: center;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    padding: 10px;*/
+/*    font-family:Arial;*/
+/*    font-weight:bolder;*/
+/*    text-transform:capitalize;*/
+/*    transition: 0.5s;*/
+/*}*/
+/*.menu li a:hover{*/
+/*    background-color: lightgrey;*/
+/*    color:black;*/
+/*}*/
+/*.div-one{*/
+/*    width:20%;*/
+/*    height:200px;*/
+/*    background-color: red;*/
+/*    float:left;*/
+/*    color:white;*/
+/*    box-sizing:border-box;*/
+/*    padding-top:80px;*/
+/*    padding-left:80px;*/
+/*    !*margin: 10px 20px 30px 40px;*!*/
+/*    !*margin-left:20px;*!*/
+/*}*/
+/*.div-two{*/
+/*    width:80%;*/
+/*    height:200px;*/
+/*    background-color: green;*/
+/*    float:left;*/
+/*}*/
+/*.div-three{*/
+/*    width:100%;*/
+/*    height:50px;*/
+/*    background-color: gray;*/
+/*    float:left;*/
+/*}*/
+/*.div-four{*/
+/*    width:15%;*/
+/*    height:600px;*/
+/*    background-color: darkolivegreen;*/
+/*    float:left;*/
+/*}*/
+/*.div-five{*/
+/*    width:85%;*/
+/*    height:600px;*/
+/*    background-color: darkgreen;*/
+/*    float:left;*/
+/*}*/
+/*.div-six{*/
+/*    width:100%;*/
+/*    height:40px;*/
+/*    background-color: gray;*/
+/*    float:left;*/
+/*}*/
+*
 {
-    background-color:green;
-    color: white;
-}
-.menu
-{
-    list-style-type: none;
-}
-.menu li{
-    float:left;
-    width: 120px;
-    border:1px solid gray;
-}
-.menu li a{
-    display:block;
-    text-decoration : none;
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    font-family:Arial;
-    font-weight:bolder;
-    text-transform:capitalize;
-    transition: 0.5s;
-}
-.menu li a:hover{
-    background-color: lightgrey;
-    color:black;
-}
-.div-one{
-    width:20%;
-    height:200px;
-    background-color: red;
-    float:left;
-    color:white;
     box-sizing:border-box;
-    padding-top:80px;
-    padding-left:80px;
-    /*margin: 10px 20px 30px 40px;*/
-    /*margin-left:20px;*/
+    margin: 0;
+    padding:0;
 }
-.div-two{
-    width:80%;
-    height:200px;
-    background-color: green;
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*='col-']
+{
     float:left;
+    border:1px solid grey;
 }
-.div-three{
-    width:100%;
-    height:50px;
-    background-color: gray;
-    float:left;
+.h-40{height:40px;}
+.h-50{height:50px;}
+.h-200{height:200px;}
+.h-250{height:250px;}
+.h-600{height:600px;}
+
+/*[class^='col-']*/
+/*{*/
+/*    float:left;*/
+/*}*/
+/*pseudo class puro element change kore*/
+/*pseudo element specific part change kore*/
+/*:after is a pseudo element*/
+/*content means new element will start, clear mane 2 ta div sore jabe, display block hoye jabe*/
+.row:after{
+    content:" ";
+    clear: both;
+    display: block;
 }
-.div-four{
-    width:15%;
-    height:600px;
-    background-color: darkolivegreen;
-    float:left;
+.container
+{
+    width:90%;
+    height: auto;
+    margin: 0 auto;
 }
-.div-five{
-    width:85%;
-    height:600px;
-    background-color: darkgreen;
-    float:left;
-}
-.div-six{
-    width:100%;
-    height:40px;
-    background-color: gray;
-    float:left;
+/*media query---> css syntax by browser resulation give condition . And that condition will work only when condition is true*/
+@media screen and (max-width: 550px)
+{
+    [class*='col-']
+    {
+       width:100%;
+    }
 }
