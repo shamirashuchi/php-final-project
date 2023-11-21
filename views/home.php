@@ -1,5 +1,52 @@
 <?php include "header.php"; ?>
 
+<nav class="navbar navbar-expand bg-dark navbar-dark">
+   <div class="container">
+       <a href="" class="navbar-brand">LOGO</a>
+       <ul class="navbar-nav">
+           <li>
+               <a href="" class="nav-link ms-5">Home</a>
+           </li>
+           <li>
+               <a href="" class="nav-link ms-5">About</a>
+           </li>
+           <li>
+               <a href="" class="nav-link ms-5">Contact</a>
+           </li>
+           <li class="dropdown">
+               <a href="" class="nav-link ms-5 dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+               <ul class="dropdown-menu dropdown-menu-dark">
+                   <li><a href="" class="dropdown-item">Service-one</a></li>
+                   <li><a href="" class="dropdown-item">Service-two</a></li>
+                   <li><a href="" class="dropdown-item">Service-three</a></li>
+                   <li><a href=""  class="dropdown-item">Service-four</a></li>
+
+               </ul>
+           </li>
+           <li>
+               <a href="" class="nav-link ms-5">Gallery</a>
+           </li>
+       </ul>
+   </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--<div class="div-one">-->
@@ -30,48 +77,62 @@
 
 
 <!--Grid-webpage layout tecknique-->
-<header>
-<div class="container">
-    <div class="row">
-        <div class="col-3 h-200 demo">LOGO</div>
-        <div class="col-9 h-200">BANNER</div>
-    </div>
-</div>
-</header>
-
-<nav>
-<div class="container">
-    <div class="row">
-        <div class="col-12 h-50">MENU</div>
-    </div>
-</div>
-    </nav>
-
-<section>
-<div class="container">
-    <div class="row">
-        <div class="col-3 h-600">SIDEBAR</div>
-        <div class="col-9 h-600">MAIN CONTENT</div>
-    </div>
-</div>
-</section>
-
-<footer>
-<div class="container">
-    <div class="row">
-        <div class="col-3 h-250">ONE</div>
-        <div class="col-3 h-250">TWO</div>
-        <div class="col-3 h-250">THREE</div>
-        <div class="col-3 h-250">FOUR</div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-12 h-40">FOOTER</div>
-    </div>
-</div>
-</footer>
+<!--<header>-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-3 h-200 demo logo">LOGO</div>-->
+<!--        <div class="col-9 h-200 banner">BANNER</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</header>-->
+<!---->
+<!--<nav>-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-12 h-50">MENU</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--    </nav>-->
+<!---->
+<!--<section>-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-3 h-600">-->
+<!--            <div class="row">-->
+<!--                <div class="col-4 h-300"></div>-->
+<!--                <div class="col-4 h-300"></div>-->
+<!--                <div class="col-4 h-300"></div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-6 h-300"></div>-->
+<!--                <div class="col-6 h-300"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-9 h-600">-->
+<!--        <div class="box-one">-->
+<!---->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</section>-->
+<!---->
+<!--<footer>-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-3 h-250">ONE</div>-->
+<!--        <div class="col-3 h-250">TWO</div>-->
+<!--        <div class="col-3 h-250">THREE</div>-->
+<!--        <div class="col-3 h-250">FOUR</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-12 h-40">FOOTER</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</footer>-->
 
 
 <?php include "footer.php"; ?>

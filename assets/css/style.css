@@ -98,6 +98,7 @@
 .h-50{height:50px;}
 .h-200{height:200px;}
 .h-250{height:250px;}
+.h-300{height:300px}
 .h-600{height:600px;}
 
 /*[class^='col-']*/
@@ -118,6 +119,72 @@
     width:90%;
     height: auto;
     margin: 0 auto;
+}
+.box-one{
+    height:300px;
+    width:300px;
+    /*background-color: red;*/
+    /*background: linear-gradient(to top,red,green,blue,yellow);*/
+    background: radial-gradient(red,green,blue,yellow);
+    float:left;
+    margin:20px;
+    /*transform:rotateY(0deg);*/
+    /*transform:scale(1);*/
+    /*transform:skewY(30deg);*/
+    /*transform:skewY(-30deg);*/
+    /*transition: 1.5s;*/
+    /*border-radius: 20px 40px 60px;*/
+    border-radius: 150px;
+}
+
+.box-one:hover
+{
+    /*transform:rotateY(360deg);*/
+    /*transform:scale(1.5);*/
+    /*transform:scale(.5);*/
+    /*transform:skew(45deg);*/
+}
+.logo{
+    animation-name: bitm;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+@Keyframes bitm{
+    /*from{background-color: red;}*/
+    /*to{background-color: green;}*/
+     0%{background-color: red;}
+    50%{background-color: green;}
+    75%{background-color: blue;}
+    100%{background-color: orange;}
+}
+
+.banner{
+    animation: slider 3s infinite;
+    /*animation-name: slider;*/
+    /*animation-duration: 3s;*/
+    /*animation-iteration-count: infinite;*/
+}
+@Keyframes  slider{
+    /*from{background-color: red;}*/
+    /*to{background-color: green;}*/
+    0%{
+        background-image: url("../img/2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    50%{
+        background-image: url("../img/3.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    100%{
+        background-image: url("../img/4.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
 }
 /*media query---> css syntax by browser resulation give condition . And that condition will work only when condition is true*/
 @media screen and (max-width: 550px)
