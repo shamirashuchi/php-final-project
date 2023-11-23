@@ -1,34 +1,26 @@
 <?php include "header.php"; ?>
 
-<nav class="navbar navbar-expand bg-dark navbar-dark">
-   <div class="container">
-       <a href="" class="navbar-brand">LOGO</a>
-       <ul class="navbar-nav">
-           <li>
-               <a href="" class="nav-link ms-5">Home</a>
-           </li>
-           <li>
-               <a href="" class="nav-link ms-5">About</a>
-           </li>
-           <li>
-               <a href="" class="nav-link ms-5">Contact</a>
-           </li>
-           <li class="dropdown">
-               <a href="" class="nav-link ms-5 dropdown-toggle" data-bs-toggle="dropdown">Service</a>
-               <ul class="dropdown-menu dropdown-menu-dark">
-                   <li><a href="" class="dropdown-item">Service-one</a></li>
-                   <li><a href="" class="dropdown-item">Service-two</a></li>
-                   <li><a href="" class="dropdown-item">Service-three</a></li>
-                   <li><a href=""  class="dropdown-item">Service-four</a></li>
 
-               </ul>
-           </li>
-           <li>
-               <a href="" class="nav-link ms-5">Gallery</a>
-           </li>
-       </ul>
-   </div>
-</nav>
+<section class="bg-info-subtle py-5">
+    <div class="container">
+        <div class="row">
+            <?php foreach ($students as $student){ ?>
+           <div class="col-md-4 mb-3">
+               <div class="card">
+                   <img src="<?php echo $student['image']; ?>" alt=""/>
+                   <div class="card-body">
+                       <h4>name:<?php echo $student['name']; ?></h4>
+                       <h4>Roll No:<?php echo $student['roll']; ?></h4>
+                       <h4>Mobile:<?php echo $student['mobile']; ?></h4>
+                       <hr/>
+                       <a href="web.php?page=detail" class="btn btn-success">Details</a>
+                   </div>
+               </div>
+           </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
 
 
 

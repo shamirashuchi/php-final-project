@@ -13,3 +13,7 @@ elseif($_GET['page'] == 'contact')
 {
     $welcome->contact();
 }
+elseif($_GET['page'] == 'detail')
+{
+    $welcome->detail();
+}
