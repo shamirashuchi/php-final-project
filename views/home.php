@@ -13,7 +13,7 @@
                        <h4>Roll No:<?php echo $student['roll']; ?></h4>
                        <h4>Mobile:<?php echo $student['mobile']; ?></h4>
                        <hr/>
-                       <a href="web.php?page=detail" class="btn btn-success">Details</a>
+                       <a href="web.php?page=detail&&id=<?php echo $student['id']; ?>" class="btn btn-success">Details</a>
                    </div>
                </div>
            </div>

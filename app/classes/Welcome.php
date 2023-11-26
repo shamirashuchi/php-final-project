@@ -16,7 +16,7 @@ use App\classes\students;
 //readable
 class Welcome
 {
-    public $student, $students,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
+    public $student, $students ,$singletudent,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
     //nijossho method
     public function  __construct()
     {
@@ -411,9 +411,18 @@ class Welcome
     {
         return view('contact');
     }
-    public function detail()
+    public function detail($id)
     {
-        return view('detail');
+        $this->student = new student();
+        $this->singletudent =  $this->student->getStudentById($id);
+        return view('detail',['student' =>  $this->singletudent]);
+    }
+    public function makeFullName()
+    {
+//        echo '<pre>';
+//        print_r($_POST);
+        $this->fullName = $_POST['first_name'].' '.$_POST['last_name'];
+        header("location: web.php?page=about&&result= $this->fullName");
     }
 
 
