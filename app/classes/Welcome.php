@@ -3,6 +3,7 @@
 
 namespace App\classes;
 use App\classes\students;
+use App\classes\Category;
 //composer resource khujbe namespace diye
 //namespace is a syntax of oop  which is used for directory
 // variable is memory location address
@@ -16,20 +17,32 @@ use App\classes\students;
 //readable
 class Welcome
 {
-    public $student, $students ,$singletudent,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
+    public $student, $students ,$singletudent,$product,$products,$ElectrinicesProducts,$category,$categories, $MenFashionProducts,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
     //nijossho method
     public function  __construct()
     {
         // this is a own class object
         $this->message ="Welcome PHP"; //value assign
+        $this->category = new Category();
+        $this->categories = $this->category->getAllCategory();
     }
     //created method of our own
     public function index()
     {
         //composer update after writting somthing in composer
-        $this->student = new student();
-        $this->students = $this->student->getAllStuddent();
-        return view('home', ['students' => $this->students]);
+//        $this->student = new student();
+//        $this->students = $this->student->getAllStuddent();
+//        return view('home', ['students' => $this->students]);
+        $this->product          = new Product();
+        $this->electronicesProducts = $this->product->getProductByCategoryId(1);
+        $this->manFashionProducts = $this->product->getProductByCategoryId(2);
+
+
+        return view('home',[
+            'electronics_products' => $this->electronicesProducts,
+            'man_Fashion_products' => $this->manFashionProducts,
+            'categories'           =>$this->categories,
+        ]);
 //        include "views/home.php";
 
 
@@ -405,11 +418,11 @@ class Welcome
     }
     public function about()
     {
-        return view('about');
+        return view('about',['categories' => $this->categories]);
     }
     public function contact()
     {
-        return view('contact');
+        return view('contact',['categories' => $this->categories]);
     }
     public function detail($id)
     {
@@ -424,6 +437,14 @@ class Welcome
         $this->fullName = $_POST['first_name'].' '.$_POST['last_name'];
         header("location: web.php?page=about&&result= $this->fullName");
     }
-
+   public function category($id)
+   {
+       $this->product          = new Product();
+       $this->products = $this->product->getProductByCategoryId($id);
+       return view('category',[
+           'categories' => $this->categories,
+           'products' => $this->products
+       ]);
+   }
 
 }

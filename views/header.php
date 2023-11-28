@@ -51,11 +51,9 @@
                 <li class="dropdown">
                     <a href="" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Service</a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a href="" class="dropdown-item">Service-one</a></li>
-                        <li><a href="" class="dropdown-item">Service-two</a></li>
-                        <li><a href="" class="dropdown-item">Service-three</a></li>
-                        <li><a href=""  class="dropdown-item">Service-four</a></li>
-
+                        <?php foreach ($categories as $category) { ?>
+                        <li><a href="web.php?page=category&&id=<?php echo $category['id']; ?>" class="dropdown-item"><?php echo $category['name']; ?></a></li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li><a href="" class="nav-link ">Gallery</a></li>

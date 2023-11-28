@@ -22,6 +22,10 @@ if (isset($_GET['page']))
     {
         $welcome->detail($_GET['id']);
     }
+    elseif($_GET['page'] == 'category')
+    {
+        $welcome->category($_GET['id']);
+    }
 }
 
 elseif(isset($_POST['full_name_btn']))

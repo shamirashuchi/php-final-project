@@ -4,19 +4,64 @@
 <section class="bg-info-subtle py-5">
     <div class="container">
         <div class="row">
-            <?php foreach ($students as $student){ ?>
-           <div class="col-md-4 mb-3">
-               <div class="card">
-                   <img src="<?php echo $student['image']; ?>" alt=""/>
-                   <div class="card-body">
-                       <h4>name:<?php echo $student['name']; ?></h4>
-                       <h4>Roll No:<?php echo $student['roll']; ?></h4>
-                       <h4>Mobile:<?php echo $student['mobile']; ?></h4>
-                       <hr/>
-                       <a href="web.php?page=detail&&id=<?php echo $student['id']; ?>" class="btn btn-success">Details</a>
+<!--            --><?php //foreach ($students as $student){ ?>
+<!--           <div class="col-md-4 mb-3">-->
+<!--               <div class="card">-->
+<!--                   <img src="--><?php //echo $student['image']; ?><!--" alt=""/>-->
+                   <div class = "col">
+            <div class=" card card-body text-center bg-transparent shadow border-8">
+<!--                       <h4>name:--><?php //echo $student['name']; ?><!--</h4>-->
+<!--                       <h4>Roll No:--><?php //echo $student['roll']; ?><!--</h4>-->
+<!--                       <h4>Mobile:--><?php //echo $student['mobile']; ?><!--</h4>-->
+<!--                       <hr/>-->
+<!--                       <a href="web.php?page=detail&&id=--><?php //echo $student['id']; ?><!--" class="btn btn-success">Details</a>-->
+                <h3>Electronices product</h3>
                    </div>
                </div>
            </div>
+<!--            --><?php //} ?>
+        <div class="row mt-4">
+            <?php foreach ($electronics_products as $electronics_product) {?>
+            <div class="col-md-4">
+            <div class="card">
+                <img src ="<?php echo $electronics_product['image']; ?>" height="368" alt=""/>
+                <div class="card-body">
+                    <h4><?php echo $electronics_product['name']; ?></h4>
+                    <p>TK. <?php echo $electronics_product['price']; ?></p>
+                    <hr/>
+                    <a href="" class="btn btn-success">Read more</a>
+        </div>
+    </div>
+            </div>
+            <?php } ?>
+            </div>
+        </div>
+</section>
+
+
+
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class = "col">
+                <div class=" card card-body text-center bg-transparent shadow border-8">
+                    <h3>Man Fashion product</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <?php foreach ($man_Fashion_products as $man_Fashion_product) {?>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src ="<?php echo $man_Fashion_product['image']; ?>" height="368" alt=""/>
+                        <div class="card-body">
+                            <h4><?php echo $man_Fashion_product['name']; ?></h4>
+                            <p>TK. <?php echo $man_Fashion_product['price']; ?></p>
+                            <hr/>
+                            <a href="" class="btn btn-success">Details</a>
+                        </div>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </div>
