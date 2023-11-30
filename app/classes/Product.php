@@ -76,4 +76,14 @@ class Product
       }
       return $this->data;
   }
+  public function getProductById($id)
+  {
+      foreach($this->products as $product)
+      {
+          if($product['id'] == $id)
+          {
+              return $product;
+          }
+      }
+  }
 }

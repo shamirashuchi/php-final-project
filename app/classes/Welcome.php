@@ -4,6 +4,7 @@
 namespace App\classes;
 use App\classes\students;
 use App\classes\Category;
+use App\classes\Product;
 //composer resource khujbe namespace diye
 //namespace is a syntax of oop  which is used for directory
 // variable is memory location address
@@ -17,7 +18,7 @@ use App\classes\Category;
 //readable
 class Welcome
 {
-    public $student, $students ,$singletudent,$product,$products,$ElectrinicesProducts,$category,$categories, $MenFashionProducts,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
+    public $student,$i, $students,$singleproduct,$singletudent,$product,$products,$ElectrinicesProducts,$category,$categories, $MenFashionProducts,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
     //nijossho method
     public function  __construct()
     {
@@ -446,5 +447,25 @@ class Welcome
            'products' => $this->products
        ]);
    }
-
+  public function productDetail($id)
+  {
+      $this->product = new Product();
+      $this->singleproduct = $this->product->getProductById($id);
+      return view('product-detail', [
+          'categories' => $this->categories,
+          'product'    =>$this->singleproduct
+      ]);
+  }
+  public function gallery()
+  {
+      return view('gallery');
+  }
+    public function makeSeries()
+    {
+        for($this->i =$_POST['starting_number']; $this->i <= $_POST['ending_number']; $this->i++)
+        {
+            $this->result .= $this->i." ";
+        }
+        header("Location: web.php?page=gallery&&$this->result)
+    }
 }

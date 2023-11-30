@@ -26,9 +26,21 @@ if (isset($_GET['page']))
     {
         $welcome->category($_GET['id']);
     }
+    elseif($_GET['page'] == 'product-detail')
+    {
+        $welcome->productDetail($_GET['id']);
+    }
+    elseif($_GET['page'] == 'gallery')
+    {
+        $welcome->gallery();
+    }
 }
 
 elseif(isset($_POST['full_name_btn']))
 {
 $welcome->makeFullName();
+}
+elseif(isset($_POST['series-btn']))
+{
+    $welcome->makeSeries();
 }

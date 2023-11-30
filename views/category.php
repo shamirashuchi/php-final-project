@@ -10,7 +10,7 @@
                         <h4>Product Name:<?php echo $product['name']; ?></h4>
                         <p>TK.<?php echo $product['price']; ?></p>
                         <hr/>
-                        <a href="" class="btn btn-success">Details</a>
+                        <a href="web.php?page=product-detail&&id=<?php echo $product['id']; ?>" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>

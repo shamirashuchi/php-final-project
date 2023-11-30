@@ -49,14 +49,14 @@
                     <a href="web.php?page=contact" class="nav-link ">Contact</a>
                 </li>
                 <li class="dropdown">
-                    <a href="" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                    <a href="" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Product Category</a>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <?php foreach ($categories as $category) { ?>
                         <li><a href="web.php?page=category&&id=<?php echo $category['id']; ?>" class="dropdown-item"><?php echo $category['name']; ?></a></li>
                         <?php } ?>
                     </ul>
                 </li>
-                <li><a href="" class="nav-link ">Gallery</a></li>
+                <li><a href="web.php?page=gallery" class="nav-link ">Gallery</a></li>
                 <li><a href="" class="nav-link ">Career</a></li>
                 <li><a href="" class="nav-link ">Gallery</a></li>
                 <li><a href="" class="nav-link ">Career</a></li>
