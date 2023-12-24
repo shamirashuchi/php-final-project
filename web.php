@@ -1,6 +1,7 @@
 <?php
 require_once "vendor/autoload.php";
 $welcome = new \App\classes\Welcome();
+use App\classes\Auth;
 //echo '<pre>';
 //print_r($POST);
 //echo '</pre>';
@@ -34,6 +35,18 @@ if (isset($_GET['page']))
     {
         $welcome->gallery();
     }
+    elseif($_GET['page'] == 'login')
+    {
+        $welcome->login();
+    }
+    elseif($_GET['page'] == 'dashboard')
+    {
+        $welcome->dashboard();
+    }
+    elseif($_GET['page'] == 'logout')
+    {
+        $welcome->logout();
+    }
 }
 
 elseif(isset($_POST['full_name_btn']))
@@ -43,4 +56,10 @@ $welcome->makeFullName();
 elseif(isset($_POST['series-btn']))
 {
     $welcome->makeSeries();
+}
+
+elseif(isset($_POST['login_btn']))
+{
+    $auth = new Auth();
+$auth->loginCheck();
 }

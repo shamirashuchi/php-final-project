@@ -63,7 +63,8 @@
 
             </ul>
             <ul class="navbar-nav">
-                <li><a href="" class="nav-link ">Login</a></li>
+                <li><a href="web.php?page=login" class="nav-link ">Login</a></li>
+                <li><a href="web.php?page=logout" class="nav-link ">Logout</a></li>
                 <li><a href="" class="nav-link ">Register</a></li>
             </ul>
         </div>

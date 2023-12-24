@@ -18,7 +18,7 @@ use App\classes\Product;
 //readable
 class Welcome
 {
-    public $student,$i, $students,$singleproduct,$singletudent,$product,$products,$ElectrinicesProducts,$category,$categories, $MenFashionProducts,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
+    public $student, $students,$singleproduct,$singletudent,$product,$products,$ElectrinicesProducts,$category,$categories, $MenFashionProducts,$fullName,$message,$i, $data = [], $firstName,$lastName,$firstNumber,$secondNumber,$result; //property declare
     //nijossho method
     public function  __construct()
     {
@@ -30,6 +30,9 @@ class Welcome
     //created method of our own
     public function index()
     {
+        session_start();
+        $_SESSION['name'] = 'BITM';
+              $_SESSION['address'] = 'Dhaka';
         //composer update after writting somthing in composer
 //        $this->student = new student();
 //        $this->students = $this->student->getAllStuddent();
@@ -423,6 +426,8 @@ class Welcome
     }
     public function contact()
     {
+        session_start();
+        echo $_SESSION['name'];
         return view('contact',['categories' => $this->categories]);
     }
     public function detail($id)
@@ -458,14 +463,28 @@ class Welcome
   }
   public function gallery()
   {
+      session_start();
+      unset($_SESSION['name']);
+      unset($_SESSION['address']);
       return view('gallery');
   }
     public function makeSeries()
     {
-        for($this->i =$_POST['starting_number']; $this->i <= $_POST['ending_number']; $this->i++)
-        {
-            $this->result .= $this->i." ";
+        for ($this->i = $_POST['starting_number']; $this->i <= $_POST['ending_number']; $this->i++) {
+            $this->result .= $this->i . " ";
         }
-        header("Location: web.php?page=gallery&&$this->result)
+        header("Location: web.php?page=gallery&&series=" . urlencode($this->result));
+            }
+            public function login()
+            {
+                return view('login');
+            }
+            public function dashboard()
+            {
+                return view('dashboard');
+            }
+    public function logout()
+    {
+       header("Location: web.php?page=login");
     }
 }
