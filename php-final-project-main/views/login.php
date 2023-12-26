@@ -13,7 +13,7 @@
                                 <div class="row mb-3">
                                     <label class="col-lg-3">User name</label>
                                     <div class="row mb-9">
-                                        <input type="text" class="form-control" name="user-name"/>
+                                        <input type="text" class="form-control" name="user_name"/>
                                 </div>
                                     <div class="row mb-3">
                                         <label class="col-lg-3">Password</label>

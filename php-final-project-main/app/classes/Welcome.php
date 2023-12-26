@@ -23,6 +23,7 @@ class Welcome
     public function  __construct()
     {
         // this is a own class object
+        session_start();
         $this->message ="Welcome PHP"; //value assign
         $this->category = new Category();
         $this->categories = $this->category->getAllCategory();
@@ -30,7 +31,6 @@ class Welcome
     //created method of our own
     public function index()
     {
-        session_start();
         $_SESSION['name'] = 'BITM';
               $_SESSION['address'] = 'Dhaka';
         //composer update after writting somthing in composer
@@ -422,11 +422,18 @@ class Welcome
     }
     public function about()
     {
-        return view('about',['categories' => $this->categories]);
+        if(isset($_SESSION['user_id']))
+        {
+            return view('about',['categories' => $this->categories]);
+        }
+        else{
+            header("Location: web.php?page=login&&message=please login first to enter about.");
+        }
+
     }
     public function contact()
     {
-        session_start();
+
         echo $_SESSION['name'];
         return view('contact',['categories' => $this->categories]);
     }
@@ -463,7 +470,6 @@ class Welcome
   }
   public function gallery()
   {
-      session_start();
       unset($_SESSION['name']);
       unset($_SESSION['address']);
       return view('gallery');
@@ -474,17 +480,31 @@ class Welcome
             $this->result .= $this->i . " ";
         }
         header("Location: web.php?page=gallery&&series=" . urlencode($this->result));
-            }
+    }
+
+
             public function login()
             {
                 return view('login');
             }
+
+
             public function dashboard()
             {
-                return view('dashboard');
+                if(isset($_SESSION['user_id']))
+                {
+                    return view('dashboard');
+                }
+                else{
+                    header("Location: web.php?page=login&&message=please login first to enter dashboard.");
+                }
+
             }
+
     public function logout()
     {
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_name']);
        header("Location: web.php?page=login");
     }
 }

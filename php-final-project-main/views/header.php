@@ -45,6 +45,7 @@
                 <li>
                     <a href="web.php?page=about" class="nav-link ">About</a>
                 </li>
+
                 <li>
                     <a href="web.php?page=contact" class="nav-link ">Contact</a>
                 </li>
@@ -63,8 +64,16 @@
 
             </ul>
             <ul class="navbar-nav">
-                <li><a href="web.php?page=login" class="nav-link ">Login</a></li>
-                <li><a href="web.php?page=logout" class="nav-link ">Logout</a></li>
+                <?php if( isset($_SESSION['user_id']) ) { ?>
+                    <li class="dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?php echo $_SESSION['user_name'];?></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="web.php?page=logout" class="dropdown-item">Logout</a></li>
+                        </ul>
+                    </li>
+                <?php } else { ?>
+                    <li><a href="web.php?page=login" class="nav-link ">Login</a></li>
+                <?php } ?>
                 <li><a href="" class="nav-link ">Register</a></li>
             </ul>
         </div>

@@ -18,6 +18,9 @@ class Auth
       {
           if($user['user_name'] == $_POST['user_name'] && $user['password'] == $_POST['password'])
           {
+              session_start();
+              $_SESSION['user_id'] = $user['id'];
+              $_SESSION['user_name'] = $user['name'];
               $this->check = true;
           }
       }
